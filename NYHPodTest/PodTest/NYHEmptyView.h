@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  - NYHNoNetworkType: 没有网络
  - NYHRequestErrorType: 请求失败
  */
-typedef enum : NSInteger {
+typedef enum : long {
     NYHNoDataType,
     NYHNoNetworkType,
     NYHRequestErrorType,

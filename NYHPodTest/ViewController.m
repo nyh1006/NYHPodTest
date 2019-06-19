@@ -21,7 +21,7 @@
     
     NYHEmptyView *emptyView = [NYHEmptyView nyh_emptyView];
     emptyView.frame = self.view.bounds;
-    emptyView.dataType = NYHRequestErrorType;
+    emptyView.dataType = NYHNoDataType;
     [self.view addSubview:emptyView];
 }
 
