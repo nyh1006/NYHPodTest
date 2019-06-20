@@ -7,6 +7,7 @@
 //
 
 #import "NYHEmptyView.h"
+#import "Masonry.h"
 
 
 @interface NYHEmptyView ()
@@ -81,19 +82,40 @@ static NYHEmptyView * emptyView = nil;
     [self addSubview:hintBtn];
 
 
-    hintImgView.bounds = CGRectMake(0, 0, 200, 200);
-    CGPoint hintImgViewCenter = CGPointMake(self.center.x, self.center.y - 100);
-    hintImgView.center = hintImgViewCenter;
+//    hintImgView.bounds = CGRectMake(0, 0, 200, 200);
+//    CGPoint hintImgViewCenter = CGPointMake(self.center.x, self.center.y - 100);
+//    hintImgView.center = hintImgViewCenter;
+//
+//
+//    hintLabel.bounds = CGRectMake(0, 0, self.bounds.size.width, 20);
+//    CGPoint hintLabelCenter = CGPointMake(self.center.x, self.center.y + 20);
+//    hintLabel.center = hintLabelCenter;
+//
+//
+//    hintBtn.bounds = CGRectMake(0, 0, 160, 40);
+//    CGPoint hintBtnCenter = CGPointMake(self.center.x, self.center.y + 80);
+//    hintBtn.center = hintBtnCenter;
     
+    // 添加约束
+    __weak typeof(self) weakself = self;
     
-    hintLabel.bounds = CGRectMake(0, 0, self.bounds.size.width, 20);
-    CGPoint hintLabelCenter = CGPointMake(self.center.x, self.center.y + 20);
-    hintLabel.center = hintLabelCenter;
+    [hintImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakself);
+        make.centerY.equalTo(weakself).offset(-100);
+    }];
+    
+    [hintLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakself);
+        make.top.equalTo(hintImgView.mas_bottom).offset(20);
+    }];
+    
+    [hintBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(120);
+        make.height.mas_equalTo(40);
+        make.centerX.equalTo(weakself);
+        make.top.equalTo(hintLabel.mas_bottom).offset(30);
+    }];
 
-
-    hintBtn.bounds = CGRectMake(0, 0, 160, 40);
-    CGPoint hintBtnCenter = CGPointMake(self.center.x, self.center.y + 80);
-    hintBtn.center = hintBtnCenter;
 }
 
 // 获取 bundle 中的资源

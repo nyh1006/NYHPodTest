@@ -15,9 +15,11 @@
 		460B5DC722BA0DDE002F182C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 460B5DC622BA0DDE002F182C /* main.m */; };
 		460B5DCF22BA0E5B002F182C /* NYHResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 460B5DCE22BA0E5B002F182C /* NYHResource.bundle */; };
 		460B5DD222BA0EC0002F182C /* NYHEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 460B5DD122BA0EC0002F182C /* NYHEmptyView.m */; };
+		47BBB816E70FDB53084F5B6B /* libPods-NYHPodTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E1788AE2CEB87D1C7DAC17D /* libPods-NYHPodTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E1788AE2CEB87D1C7DAC17D /* libPods-NYHPodTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYHPodTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		460B5DB422BA0DDD002F182C /* NYHPodTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYHPodTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		460B5DB722BA0DDD002F182C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		460B5DB822BA0DDD002F182C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -31,6 +33,8 @@
 		460B5DCE22BA0E5B002F182C /* NYHResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NYHResource.bundle; sourceTree = "<group>"; };
 		460B5DD022BA0EC0002F182C /* NYHEmptyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYHEmptyView.h; sourceTree = "<group>"; };
 		460B5DD122BA0EC0002F182C /* NYHEmptyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYHEmptyView.m; sourceTree = "<group>"; };
+		674B006F1C3CB7AE313DC498 /* Pods-NYHPodTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYHPodTest.debug.xcconfig"; path = "Target Support Files/Pods-NYHPodTest/Pods-NYHPodTest.debug.xcconfig"; sourceTree = "<group>"; };
+		AE512BEDA6E0036D97BDC95A /* Pods-NYHPodTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYHPodTest.release.xcconfig"; path = "Target Support Files/Pods-NYHPodTest/Pods-NYHPodTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BBB816E70FDB53084F5B6B /* libPods-NYHPodTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,6 +54,8 @@
 			children = (
 				460B5DB622BA0DDD002F182C /* NYHPodTest */,
 				460B5DB522BA0DDD002F182C /* Products */,
+				84BBE9618790F709147C92EA /* Pods */,
+				F88BFD79B1EDDA7A986D664D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +94,24 @@
 			path = PodTest;
 			sourceTree = "<group>";
 		};
+		84BBE9618790F709147C92EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				674B006F1C3CB7AE313DC498 /* Pods-NYHPodTest.debug.xcconfig */,
+				AE512BEDA6E0036D97BDC95A /* Pods-NYHPodTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F88BFD79B1EDDA7A986D664D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E1788AE2CEB87D1C7DAC17D /* libPods-NYHPodTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -94,6 +119,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 460B5DCA22BA0DDE002F182C /* Build configuration list for PBXNativeTarget "NYHPodTest" */;
 			buildPhases = (
+				34334F3A0EA0EEE2C2EE5E46 /* [CP] Check Pods Manifest.lock */,
 				460B5DB022BA0DDD002F182C /* Sources */,
 				460B5DB122BA0DDD002F182C /* Frameworks */,
 				460B5DB222BA0DDD002F182C /* Resources */,
@@ -152,6 +178,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34334F3A0EA0EEE2C2EE5E46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NYHPodTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		460B5DB022BA0DDD002F182C /* Sources */ = {
@@ -301,6 +352,7 @@
 		};
 		460B5DCB22BA0DDE002F182C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 674B006F1C3CB7AE313DC498 /* Pods-NYHPodTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -319,6 +371,7 @@
 		};
 		460B5DCC22BA0DDE002F182C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE512BEDA6E0036D97BDC95A /* Pods-NYHPodTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
