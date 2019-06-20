@@ -80,21 +80,6 @@ static NYHEmptyView * emptyView = nil;
     hintBtn.layer.borderWidth = 1.0f;
     [hintBtn addTarget:self action:@selector(hintBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:hintBtn];
-
-
-//    hintImgView.bounds = CGRectMake(0, 0, 200, 200);
-//    CGPoint hintImgViewCenter = CGPointMake(self.center.x, self.center.y - 100);
-//    hintImgView.center = hintImgViewCenter;
-//
-//
-//    hintLabel.bounds = CGRectMake(0, 0, self.bounds.size.width, 20);
-//    CGPoint hintLabelCenter = CGPointMake(self.center.x, self.center.y + 20);
-//    hintLabel.center = hintLabelCenter;
-//
-//
-//    hintBtn.bounds = CGRectMake(0, 0, 160, 40);
-//    CGPoint hintBtnCenter = CGPointMake(self.center.x, self.center.y + 80);
-//    hintBtn.center = hintBtnCenter;
     
     // 添加约束
     __weak typeof(self) weakself = self;

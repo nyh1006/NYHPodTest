@@ -62,7 +62,6 @@
     [super viewDidLoad];
     
     NYHEmptyView *emptyView = [NYHEmptyView nyh_emptyView];
-//    emptyView.frame = self.view.bounds;
     emptyView.dataType = NYHNoDataType;
     [self.view addSubview:emptyView];
     
