@@ -13,6 +13,7 @@
  3.第三方库依赖问题(如果依赖第三方库,该如何处理)
  4.git 命令行
  
+ 
  通过命令行把项目上传到 github
  1、cd *项目所在根目录*
  2、git init
@@ -23,9 +24,9 @@
  7、回车之后，如果提示：remote origin already exists，
  请输入：git remote rm origin之后重新执行第6步。
  （如果没有错误，请忽略这一步）
- git pull origin master
- 8、git push -u origin master
- 9、刷新GitHub，项目已经上传成功。
+ 8、上传之前先 pull 一下, git pull origin master
+ 9、git push -u origin master
+ 10、刷新GitHub，项目已经上传成功。
  
 
  给项目打标记
